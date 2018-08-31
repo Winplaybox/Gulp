@@ -1,5 +1,5 @@
 # VS-Gulp
-Gulp Tutorial 
+<center><h1>Gulp Tutorial</h1></center>
 <ul>
 <li><strong> gulp.task</strong> -- Define task</li>
 <li><strong> gulp.src</strong> -- Point to File to use</li>
