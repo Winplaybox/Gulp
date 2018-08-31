@@ -8,6 +8,7 @@ const rename = require('gulp-rename');
 const brotli = require('gulp-brotli');
 const gzip = require('gulp-gzip');
 const tar = require('gulp-tar');
+const cssScss = require ('gulp-css-scss');
 
 // logs Message
 
@@ -131,4 +132,12 @@ gulp.task('tar',function(){
     gulp.src('dist/gzip/*')
     .pipe(tar('achive.tar'))
     .pipe(gulp.dest('dist/tar'))
+  });
+
+// create CssScss [This plugins will convert from  css to scss]
+
+  gulp.task('css-scss', () => {
+    gulp.src('dist/css/*.css')
+      .pipe(cssScss())
+      .pipe(gulp.dest('dist/cssScss'));
   });
