@@ -3,8 +3,8 @@ Gulp Tutorial
 gulp installation for VSCode:
 
 //to use globally install with --global
-<code>
-npm install --global gulp-cli</code>
+<pre><code>
+npm install --global gulp-cli</code></pre>
 
 //to create package.json file create where u r going to save project
 <code>npm init</code>
