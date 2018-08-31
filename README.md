@@ -50,3 +50,4 @@ OR
            .pipe(gulp.dest('dist/css'))
 }</code></pre>
 
+<strong>Plugins list[type in terminal or Command prompt]</strong>

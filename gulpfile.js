@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
+const uglify= require('gulp-uglify');
 // logs Message
 
 gulp.task('message',function(){
@@ -22,6 +23,13 @@ gulp.src('src/images/*')
     .pipe(gulp.dest('dist/images'))
 });
 
+//  minify js
+
+gulp.task('minify',function(){
+    gulp.src('src/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js'))
+  });
 
 gulp.task('sass',function(){
     gulp.src('src/sass/*.scss')
