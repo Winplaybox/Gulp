@@ -51,3 +51,12 @@ OR
 }</code></pre>
 
 <strong>Plugins list[type in terminal or Command prompt]</strong>
+<pre><code>
+<ul style="list-style-type: decimal;">
+<li><mark>npm</mark> install --save-dev gulp</li>
+<li><mark>npm</mark> install --save-dev gulp-sass</li>
+<li><mark>npm</mark> install --save-dev gulp-imagemin</li>
+<li><mark>npm</mark> install --save-dev gulp-uglify</li>
+<li><mark>npm</mark> install --save-dev gulp-sourcemaps</li>
+</ul>
+</code></pre>

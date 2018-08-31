@@ -2,6 +2,8 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const uglify= require('gulp-uglify');
+const sourcemaps=require('gulp-sourcemaps');
+
 // logs Message
 
 gulp.task('message',function(){
@@ -31,8 +33,20 @@ gulp.task('minify',function(){
     .pipe(gulp.dest('dist/js'))
   });
 
+//compile sass to css
+
 gulp.task('sass',function(){
     gulp.src('src/sass/*.scss')
         .pipe(sass())
         .pipe(gulp.dest('dist/css'))
-})
+});
+
+// before compile sass create source maps [css.map]
+
+gulp.task('sassmap',function(){
+    gulp.src('src/sass/*.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass().on('Error',sass.logError))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('dist/css'))
+  });

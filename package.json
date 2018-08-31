@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/Winplaybox/VS-Gulp.git"
   },
-  "author": "Goku",
+  "author": "Winplaybox",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Winplaybox/VS-Gulp/issues"
@@ -20,6 +20,7 @@
     "gulp": "^3.9.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1"
   },
   "dependencies": {}
