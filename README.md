@@ -4,38 +4,38 @@ gulp installation for VSCode:
 
 //to use globally install with --global
 <pre><code>
-npm install --global gulp-cli</code><?pre>
+npm install --global gulp-cli</code></pre>
 
 //to create package.json file create where u r going to save project
-<code>npm init</code>
+<pre><code>npm init</code></pre>
 
 //will create dependecy and add line in pakage.json,also will install node-module
-<code>npm install gulp --save-dev</code>
+<pre><code>npm install gulp --save-dev</code></pre>
 
 //create gulpfile.js on same directory as package.json and add task 
-<code>gulpfile.js</code>
+<pre><code>gulpfile.js</code></pre>
 
 //importing gulp dir from node-modules
-<code>var gulp = require('gulp');</code>
+<pre><code>var gulp = require('gulp');</code></pre>
 
 //create task of gulp
-<code>gulp.task('demo',function(){
+<pre><code>gulp.task('demo',function(){
 	//all task will be here
 	console.log('working');
 });
-</code>
+</code></pre>
 //for ckecking gulp task in terminal
-<code>gulp taskname</code>
+<pre><code>gulp taskname</code></pre>
 
 //install sass for converting scss to css
-<code>npm install gulp-sass --save-dev</code>
+<pre><code>npm install gulp-sass --save-dev</code></pre>
 
 //add line in gulpfile.js
-<code>var saas=require('gulp-sass');</code>
+<pre><code>var saas=require('gulp-sass');</code></pre>
 
-<code>gulp.task('sass',function(){
+<pre><code>gulp.task('sass',function(){
     return gulp.src('src/sass/*.scss')
            .pipe(sass())
            .pipe(gulp.dest('dist/css'))
-}</code>
+}</code></pre>
 
