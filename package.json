@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Winplaybox/VS-Gulp#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^4.1.0",
     "gulp-sass": "^4.0.1"
   },
   "dependencies": {}
