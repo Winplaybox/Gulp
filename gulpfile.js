@@ -6,6 +6,9 @@ const sourcemaps =require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const rename = require('gulp-rename');
 const brotli = require('gulp-brotli');
+const gzip = require('gulp-gzip');
+const tar = require('gulp-tar');
+
 // logs Message
 
 gulp.task('message',function(){
@@ -112,4 +115,20 @@ gulp.task('decompress',function(){
     gulp.src('dist/compress/*.br')
     .pipe(brotli.decompress())
     .pipe(gulp.dest('dist/decompress'))
+  });
+
+// create in gzip files [This will compress particular file like sass or js or images and format is .gz]
+
+gulp.task('gzip',function(){
+    gulp.src('src/js/*.js')
+    .pipe(gzip())
+    .pipe(gulp.dest('dist/gzip'))
+  });
+
+// create in tar files [This will compress particular file like sass or js or images and format is .tar]
+
+gulp.task('tar',function(){
+    gulp.src('dist/gzip/*')
+    .pipe(tar('achive.tar'))
+    .pipe(gulp.dest('dist/tar'))
   });

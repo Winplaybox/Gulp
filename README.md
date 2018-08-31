@@ -8,6 +8,19 @@
 <li><strong> gulp.watch</strong> -- watch folder and folder for changes</li>
 </ul>
 <strong>Gulp installation for Visual Studio Code:</strong>
+<h3>TO learn gulp first of all you need to install node.js setup file which is given below</h3>
+<ul>
+<li><p>LTS</p><p>Recommended For Most Users</p>
+<ul><li><a href="https://nodejs.org/dist/v8.11.4/node-v8.11.4-x64.msi" target="_blank" title="Install Node.js official Windows Version">Windows User</a></li>
+<li><a href="https://nodejs.org/dist/v8.11.4/node-v8.11.4.pkg" target="_blank" title="Install Node.js official Windows Version">MacOS User</a></li>
+<li><a href="https://nodejs.org/dist/v8.11.4/node-v8.11.4.tar.gz" target="_blank" title="Install Node.js official Windows Version">Source Code</a></li>
+</ul></li>
+<li><p>Current</p><p>Latest Features</p>
+<ul><li><a href="https://nodejs.org/dist/v10.9.0/node-v10.9.0-x64.msi" target="_blank" title="Install Node.js official Windows Version">Windows User</a></li>
+<li><a href="https://nodejs.org/dist/v10.9.0/node-v10.9.0.pkg" target="_blank" title="Install Node.js official Windows Version">MacOS User</a></li>
+<li><a href="https://nodejs.org/dist/v10.9.0/node-v10.9.0.tar.gz" target="_blank" title="Install Node.js official Windows Version">Source Code</a></li>
+</ul></li>
+</ul>
 
 1). To use globally install with --global or -g
 <pre><code>npm install --global gulp-cli</code></pre>
@@ -61,4 +74,6 @@ OR auto add line in pakage.json [i.e., dependencies{..}]
 <li><strong>npm</strong> install --save-dev gulp-concat</li>
 <li><strong>npm</strong> install --save-dev gulp-rename</li>
 <li><strong>npm</strong> install --save-dev gulp-brotli</li>
+<li><strong>npm</strong> install --save-dev gulp-gzip</li>
+<li><strong>npm</strong> install --save-dev gulp-tar</li>
 </ul></code></pre>
