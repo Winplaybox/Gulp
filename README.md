@@ -17,9 +17,10 @@ OR
 2). To create package.json file write this code on terminal or command prompt & and place where your main folder is present
 <pre><code>npm init</code></pre>
 
-3). This Will create dependecy and auto add line in pakage.json, also will install node-module folder in your main folder
+3). This will create dependecy and auto add line in pakage.json [i.e., devDependencies{..}], also will install node-module folder in your main folder
 <pre><code>npm install gulp --save-dev</code></pre>
-
+OR auto add line in pakage.json [i.e., dependencies{..}]
+<pre><code>npm install gulp</code></pre>
 4). Create gulpfile.js on same directory[i.e., main folder]
 <pre><code>gulpfile.js</code></pre>
 
@@ -50,11 +51,14 @@ OR
            .pipe(gulp.dest('dist/css'))
 }</code></pre>
 
-<strong>Plugins list[type in terminal or Command prompt]</strong>
+<h2><strong>Plugins list[type in terminal or Command prompt]</strong></h2>
 <pre><code><ul>
 <li><strong>npm</strong> install --save-dev gulp</li>
 <li><strong>npm</strong> install --save-dev gulp-sass</li>
 <li><strong>npm</strong> install --save-dev gulp-imagemin</li>
 <li><strong>npm</strong> install --save-dev gulp-uglify</li>
 <li><strong>npm</strong> install --save-dev gulp-sourcemaps</li>
+<li><strong>npm</strong> install --save-dev gulp-concat</li>
+<li><strong>npm</strong> install --save-dev gulp-rename</li>
+<li><strong>npm</strong> install --save-dev gulp-brotli</li>
 </ul></code></pre>
