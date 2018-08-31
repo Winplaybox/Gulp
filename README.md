@@ -1,4 +1,4 @@
-# VS-Gulp
+# Gulp
 <h1><center>Gulp Tutorial</center></h1>
 <ul>
 <li><strong> gulp.task</strong> -- Define task</li>
