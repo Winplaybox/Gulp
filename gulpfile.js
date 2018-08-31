@@ -14,7 +14,7 @@ gulp.task('copyHTML',function(){
     .pipe(gulp.dest('dist'));
   }); 
 
-// optimize images
+// optimize images [Minified 3 images (saved 36.1 kB - 15.5%)]
 
 gulp.task('imagemin',function(){
 gulp.src('src/images/*')
