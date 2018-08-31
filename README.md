@@ -1,19 +1,17 @@
 # VS-Gulp
-<center><h1>Gulp Tutorial</h1></center>
+<h1><center>Gulp Tutorial</center></h1>
 <ul>
 <li><strong> gulp.task</strong> -- Define task</li>
 <li><strong> gulp.src</strong> -- Point to File to use</li>
 <li><strong> gulp.dest</strong> -- Point to folder to output</li>
 <li><strong> gulp.watch</strong> -- watch folder and folder for changes</li>
 </ul>
-gulp installation for VSCode:
+<strong>Gulp installation for Visual Studio Code:</strong>
 
 1). To use globally install with --global or -g
-<pre><code>
-npm install --global gulp-cli</code></pre>
+<pre><code>npm install --global gulp-cli</code></pre>
 OR
-<pre><code>
-npm install --g gulp</code></pre>
+<pre><code>npm install --g gulp</code></pre>
 
 2). To create package.json file write this code on terminal or command prompt & and place where your main folder is present
 <pre><code>npm init</code></pre>
