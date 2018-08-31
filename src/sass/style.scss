@@ -1,0 +1,31 @@
+body{
+    background-color:#ccc;
+    h1{
+        background-color: #fff;
+        color: #000;
+        border:1px solid;
+        font-family: 'Courier New', Courier, monospace;
+        font-size:20px;
+        border-color: red;
+    } 
+    p{
+        font-size:10px;
+    }
+}
+
+h2{
+    background-color: #fff;
+    color: #000;
+    border:1px solid;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:20px;
+    border-color: red;
+    span{
+        background-color: #fff;
+        color: #000;
+        border:1px solid;
+        font-family: 'Courier New', Courier, monospace;
+        font-size:20px;
+        border-color: red;
+    } 
+}
