@@ -1,11 +1,11 @@
 # VS-Gulp
 Gulp Tutorial 
-<!--
-gulp.task -- Define task
-gulp.src -- Point to File to use
-gulp.dest -- Point to folder to output
-gulp.watch -- watch folder and folder for changes
- -->
+<ul>
+<li><strong> gulp.task</strong> -- Define task</li>
+<li><strong> gulp.src</strong> -- Point to File to use</li>
+<li><strong> gulp.dest</strong> -- Point to folder to output</li>
+<li><strong> gulp.watch</strong> -- watch folder and folder for changes</li>
+</ul>
 gulp installation for VSCode:
 
 1). To use globally install with --global or -g
@@ -28,11 +28,13 @@ npm install --g gulp</code></pre>
 <pre><code>const gulp = require('gulp');</code></pre>
 
 6). Create your first task of gulp via entering below code on terminal or command prompt
+
 <pre><code>gulp.task('demo',function(){
 	//all task will be here
 	console.log('working');
 });
 </code></pre>
+
 7). For checking gulp task in terminal or command prompt 
 <pre><code>gulp taskname</code></pre>
 
@@ -41,6 +43,7 @@ npm install --g gulp</code></pre>
 
 9). Add line in gulpfile.js
 <pre><code>const saas=require('gulp-sass');</code></pre>
+
 
 <pre><code>gulp.task('sass',function(){
     return gulp.src('src/sass/*.scss')
