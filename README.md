@@ -1,41 +1,50 @@
 # VS-Gulp
 Gulp Tutorial 
+<!--
+gulp.task -- Define task
+gulp.src -- Point to File to use
+gulp.dest -- Point to folder to output
+gulp.watch -- watch folder and folder for changes
+ -->
 gulp installation for VSCode:
 
-//to use globally install with --global
+1). To use globally install with --global or -g
 <pre><code>
 npm install --global gulp-cli</code></pre>
+OR
+<pre><code>
+npm install --g gulp</code></pre>
 
-//to create package.json file create where u r going to save project
-<code>npm init</code>
+2). To create package.json file write this code on terminal or command prompt & and place where your main folder is present
+<pre><code>npm init</code></pre>
 
-//will create dependecy and add line in pakage.json,also will install node-module
-<code>npm install gulp --save-dev</code>
+3). This Will create dependecy and auto add line in pakage.json, also will install node-module folder in your main folder
+<pre><code>npm install gulp --save-dev</code></pre>
 
-//create gulpfile.js on same directory as package.json and add task 
-<code>gulpfile.js</code>
+4). Create gulpfile.js on same directory[i.e., main folder]
+<pre><code>gulpfile.js</code></pre>
 
-//importing gulp dir from node-modules
-<code>var gulp = require('gulp');</code>
+5). Importing gulp directory from node-modules folder write this code on terminal or command prompt
+<pre><code>const gulp = require('gulp');</code></pre>
 
-//create task of gulp
-<code>gulp.task('demo',function(){
+6). Create your first task of gulp via entering below code on terminal or command prompt
+<pre><code>gulp.task('demo',function(){
 	//all task will be here
 	console.log('working');
 });
-</code>
-//for ckecking gulp task in terminal
-<code>gulp taskname</code>
+</code></pre>
+7). For checking gulp task in terminal or command prompt 
+<pre><code>gulp taskname</code></pre>
 
-//install sass for converting scss to css
-<code>npm install gulp-sass --save-dev</code>
+8). Install gulp-sass for converting scss to css
+<pre><code>npm install gulp-sass --save-dev</code></pre>
 
-//add line in gulpfile.js
-<code>var saas=require('gulp-sass');</code>
+9). Add line in gulpfile.js
+<pre><code>const saas=require('gulp-sass');</code></pre>
 
-<code>gulp.task('sass',function(){
+<pre><code>gulp.task('sass',function(){
     return gulp.src('src/sass/*.scss')
            .pipe(sass())
            .pipe(gulp.dest('dist/css'))
-}</code>
+}</code></pre>
 
