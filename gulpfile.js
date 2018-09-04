@@ -11,6 +11,7 @@ const tar = require('gulp-tar');
 const cssScss = require ('gulp-css-scss');
 const postcss = require('gulp-postcss');
 const ext_replace= require('gulp-ext-replace');
+const jsonminify= require('gulp-jsonminify');
 
 // logs Message
 
@@ -187,4 +188,12 @@ gulp.task('change', function() {
     gulp.src('src/*.coffee')
         .pipe(ext_replace('.coffee','.js'))
         .pipe(gulp.dest('dist/extreplace/change'))
+  });
+
+// minify jsson file like uglify
+
+gulp.task('jminify',function(){
+    gulp.src('src/*.json')
+    .pipe(jsonminify())
+    .pipe(gulp.dest('dist/json'))
   });
