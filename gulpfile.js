@@ -150,3 +150,27 @@ gulp.task('postcss',function(){
     .pipe(postcss())
     .pipe(gulp.dest('dist'));
   });
+
+// csswring minify css and autoprefixer [auto compatiable with all browser]
+gulp.task('csswring',function(){
+    var process=[
+      csswring,
+      autoprefixer
+    ];
+    gulp.src('src/sass/*.scss')
+    .pipe(sass().on('Error',sass.logError))
+    .pipe(postcss(process))
+    .pipe(gulp.dest('dist/prefixer'))
+  });
+  // css nano and autoprefixer({browsers:['last 2 version']}) this will copatiable with last 2 version of all browser
+  
+  gulp.task('cssnano1', function () {
+      var plugins2 = [
+          autoprefixer({browsers:['last 2 version']}),
+          cssnano
+      ];
+       gulp.src('src/sass/*.scss')
+       .pipe(sass().on('Error',sass.logError))
+          .pipe(postcss(plugins2))
+          .pipe(gulp.dest('dist/cssnano'));
+  }); 
