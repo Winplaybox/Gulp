@@ -9,6 +9,7 @@ const brotli = require('gulp-brotli');
 const gzip = require('gulp-gzip');
 const tar = require('gulp-tar');
 const cssScss = require ('gulp-css-scss');
+const postcss = require('gulp-postcss');
 
 // logs Message
 
@@ -140,4 +141,12 @@ gulp.task('tar',function(){
     gulp.src('dist/css/*.css')
       .pipe(cssScss())
       .pipe(gulp.dest('dist/cssScss'));
+  });
+
+// post css
+
+gulp.task('postcss',function(){
+    gulp.src('dist/css/*.css')
+    .pipe(postcss())
+    .pipe(gulp.dest('dist'));
   });

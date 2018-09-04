@@ -64,7 +64,7 @@ OR auto add line in pakage.json [i.e., dependencies{..}]
            .pipe(gulp.dest('dist/css'))
 }</code></pre>
 
-<h2><strong>Plugins list[type in terminal or Command prompt]</strong></h2>
+<h2><strong>Plugins list [type in terminal or Command prompt]</strong></h2>
 <pre><code><ul>
 <li><strong>npm</strong> install --save-dev gulp</li>
 <li><strong>npm</strong> install --save-dev gulp-sass</li>
@@ -77,4 +77,5 @@ OR auto add line in pakage.json [i.e., dependencies{..}]
 <li><strong>npm</strong> install --save-dev gulp-gzip</li>
 <li><strong>npm</strong> install --save-dev gulp-tar</li>
 <li><strong>npm</strong> install --save-dev gulp-css-scss</li>
+<li><strong>npm</strong> install --save-dev gulp-postcss</li>
 </ul></code></pre>
