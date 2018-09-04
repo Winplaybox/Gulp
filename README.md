@@ -78,4 +78,5 @@ OR auto add line in pakage.json [i.e., dependencies{..}]
 <li><strong>npm</strong> install --save-dev gulp-tar</li>
 <li><strong>npm</strong> install --save-dev gulp-css-scss</li>
 <li><strong>npm</strong> install --save-dev gulp-postcss</li>
+<li><strong>npm</strong> install --save-dev gulp-ext-replace</li>
 </ul></code></pre>

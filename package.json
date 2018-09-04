@@ -21,6 +21,7 @@
     "gulp-brotli": "^1.2.1",
     "gulp-concat": "^2.6.1",
     "gulp-css-scss": "^0.1.0",
+    "gulp-ext-replace": "^0.3.0",
     "gulp-gzip": "^1.4.2",
     "gulp-imagemin": "^4.1.0",
     "gulp-postcss": "^8.0.0",

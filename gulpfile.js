@@ -10,6 +10,7 @@ const gzip = require('gulp-gzip');
 const tar = require('gulp-tar');
 const cssScss = require ('gulp-css-scss');
 const postcss = require('gulp-postcss');
+const ext_replace= require('gulp-ext-replace');
 
 // logs Message
 
@@ -173,4 +174,17 @@ gulp.task('csswring',function(){
        .pipe(sass().on('Error',sass.logError))
           .pipe(postcss(plugins2))
           .pipe(gulp.dest('dist/cssnano'));
-  }); 
+  });
+
+// replace extension in second way
+gulp.task('extreplace',function(){
+    gulp.src('src/*.coffee')
+    .pipe(ext_replace('.js'))
+    .pipe(gulp.dest('dist/extreplace'))
+  });
+
+gulp.task('change', function() {
+    gulp.src('src/*.coffee')
+        .pipe(ext_replace('.coffee','.js'))
+        .pipe(gulp.dest('dist/extreplace/change'))
+  });
