@@ -81,4 +81,5 @@ OR auto add line in pakage.json [i.e., dependencies{..}]
 <li><strong>npm</strong> install --save-dev gulp-ext-replace</li>
 <li><strong>npm</strong> install --save-dev gulp-jsonminify</li>
 <li><strong>npm</strong> install --save-dev gulp-util</li>
+<li><strong>npm</strong> install --save-dev gulp-subtask</li>
 </ul></code></pre>

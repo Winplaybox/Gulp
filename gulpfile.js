@@ -13,6 +13,7 @@ const postcss = require('gulp-postcss');
 const ext_replace= require('gulp-ext-replace');
 const jsonminify= require('gulp-jsonminify');
 const gutil= require('gulp-util');
+const SubTask= require('gulp-subtask');
 
 // logs Message
 
@@ -205,4 +206,32 @@ gulp.task('noop', function() {
     .pipe(concat('script.js'))
     .pipe(gutil.env.type === 'sbmscript' ? uglify() : gutil.noop())
     .pipe(gulp.dest('dist/noop'));
+});
+
+// lib bundle into uglify
+gulp.task('bundle',function(){
+  gulp.src('src/js/*.js')
+  .pipe(rename('bunjdle.min.js'))
+  .pipe(sourcemaps.init())
+  //.pipe(plugins.duglify())
+  .pipe(sourcemaps.write('./maps'))
+  .pipe(gulp.dest('dist/sourcemap'))
+});
+
+// creating sub task of js
+gulp.task('subtask',function(){
+  var taskrun= new SubTask('taskrun')
+  .src('{{src}}')
+  .pipe(concat,'main.js')
+  .pipe(uglify,'{{concat}}')
+  .pipe(gulp.dest,'dist/subtask')
+
+  taskrun.run({
+    src:'src/js/*.js',
+    concat:'file1.js'
+  });
+  taskrun.run({
+    src:'src/js/*.js',
+    concat:'file2.js'
+  });
 });
