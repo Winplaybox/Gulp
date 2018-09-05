@@ -8,7 +8,7 @@
 <li><strong> gulp.watch</strong> -- watch folder and folder for changes</li>
 </ul>
 <strong>Gulp installation for Visual Studio Code:</strong>
-<h3>TO learn gulp first of all you need to install node.js setup file which is given below</h3>
+<h3>To learn gulp first of all you need to install node.js setup file which is given below</h3>
 <ul>
 <li><p>LTS</p><p>Recommended For Most Users</p>
 <ul><li><a href="https://nodejs.org/dist/v8.11.4/node-v8.11.4-x64.msi" target="_blank" title="Install Node.js official Windows Version">Windows User</a></li>
