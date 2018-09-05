@@ -14,6 +14,7 @@ const ext_replace= require('gulp-ext-replace');
 const jsonminify= require('gulp-jsonminify');
 const gutil= require('gulp-util');
 const SubTask= require('gulp-subtask');
+const plumber= require('gulp-plumber');
 
 // logs Message
 
@@ -234,4 +235,13 @@ gulp.task('subtask',function(){
     src:'src/js/*.js',
     concat:'file2.js'
   });
+});
+
+// plumber
+gulp.task('plumber',function(){
+  gulp.src('src/js/*.js')
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(plumber.stop())
+    .pipe(gulp.dest('dist/plumber'));
 });
