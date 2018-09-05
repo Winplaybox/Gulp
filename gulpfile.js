@@ -12,6 +12,7 @@ const cssScss = require ('gulp-css-scss');
 const postcss = require('gulp-postcss');
 const ext_replace= require('gulp-ext-replace');
 const jsonminify= require('gulp-jsonminify');
+const gutil= require('gulp-util');
 
 // logs Message
 
@@ -197,3 +198,11 @@ gulp.task('jminify',function(){
     .pipe(jsonminify())
     .pipe(gulp.dest('dist/json'))
   });
+
+// noop()
+gulp.task('noop', function() {
+  gulp.src('src/js/*.js')
+    .pipe(concat('script.js'))
+    .pipe(gutil.env.type === 'sbmscript' ? uglify() : gutil.noop())
+    .pipe(gulp.dest('dist/noop'));
+});
