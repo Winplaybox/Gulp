@@ -24,6 +24,7 @@
     "gulp-css-scss": "^0.1.0",
     "gulp-ext-replace": "^0.3.0",
     "gulp-gzip": "^1.4.2",
+    "gulp-iconfont": "^10.0.1",
     "gulp-imagemin": "^4.1.0",
     "gulp-jsonminify": "^1.1.0",
     "gulp-plumber": "^1.2.0",

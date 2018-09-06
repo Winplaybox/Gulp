@@ -16,6 +16,7 @@ const gutil= require('gulp-util');
 const SubTask= require('gulp-subtask');
 const plumber= require('gulp-plumber');
 const cleanCSS= require('gulp-clean-css');
+const iconfont = require('gulp-iconfont');
 
 // logs Message
 
@@ -247,6 +248,7 @@ gulp.task('plumber',function(){
     .pipe(gulp.dest('dist/plumber'));
 });
 
+// subtask with clean css and concat
 gulp.task('tsk',function(){
   var task = new SubTask('task')
        .src('{{src}}')
@@ -263,4 +265,28 @@ gulp.task('tsk',function(){
        concatfile : 'concat.css',
        dest : 'dist/subtaskCSSChanges'
    });
+});
+
+
+// cleanCSS
+gulp.task('minifycss', () => {
+  return gulp.src('dist/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist/cleancss'));
+
+});
+
+//ICONFONTS
+gulp.task('iconfonts',function(){
+  gulp.src('src/icons/*.svg')
+  .pipe(iconfont({
+    fontName:'sbmfont',
+    appendCodepoints:true
+  }))
+  .on('codepoints',function(codepoints,options){
+    console.log(codepoints,options)
+  })
+
+  .pipe(gulp.dest('dist/Iconfont'))
+  gulp.start('minifycss')
 });
