@@ -19,6 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-brotli": "^1.2.1",
+    "gulp-clean-css": "^3.10.0",
     "gulp-concat": "^2.6.1",
     "gulp-css-scss": "^0.1.0",
     "gulp-ext-replace": "^0.3.0",
