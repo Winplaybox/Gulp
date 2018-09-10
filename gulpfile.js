@@ -17,6 +17,7 @@ const SubTask= require('gulp-subtask');
 const plumber= require('gulp-plumber');
 const cleanCSS= require('gulp-clean-css');
 const iconfont = require('gulp-iconfont');
+const useref= reuiqre('gulp-useref');
 
 // logs Message
 
@@ -289,4 +290,25 @@ gulp.task('iconfonts',function(){
 
   .pipe(gulp.dest('dist/Iconfont'))
   gulp.start('minifycss')
+});
+
+// useref
+gulp.task('user',function(){
+  gulp.src('src/*.html')
+  .pipe(useref())
+  .pipe(gulp.dest('dist'))
+});
+// useref with options
+gulp.task('user1',function(){
+  gulp.src('src/*.html')
+  .pipe(useref({searchPath:'.tmp'}))
+  .pipe(gulp.dest('dist'))
+});
+// codintional in userref
+gulp.task('condi',function(){
+  gulp.src('dist/*.html')
+  .pipe(plugins.useref())
+  .pipe(plugins.if('*.css',cleanCSS()))
+  .pipe(plugins.if('*.js',plugins.uglify()))
+  .pipe(gulp.dest('dist/condi'))
 });
